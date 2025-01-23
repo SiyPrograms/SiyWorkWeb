@@ -1,0 +1,101 @@
+.page[b-4na5zezg94] {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+main[b-4na5zezg94] {
+    flex: 1;
+}
+
+.sidebar[b-4na5zezg94] {
+    background-color: rgba(184, 134, 11, 0.5); /* darkgoldenrod with 50% transparency */
+    /* display: none; Make sidebar invisible by default */
+}
+
+.header[b-4na5zezg94] {
+    background-color: darkgoldenrod;
+    justify-content: space-between; /* Adjusted to space-between */
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem; /* Added padding for spacing */
+    position: relative; /* Added for centering */
+}
+
+#imgHamburgerMenu[b-4na5zezg94] {
+    width: 2.5rem;
+    height: auto;
+    align-self: center;
+    justify-self: start;
+    margin-left: 1rem;
+    margin-right: auto; /* Ensure it is to the left */
+}
+
+#AppName[b-4na5zezg94]{
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-self: center;
+    justify-self: center;
+    position: absolute; /* Centering */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#profileGrid[b-4na5zezg94]{
+    margin-left: auto; /* Ensure it is to the right */
+    margin-right: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 2rem 1rem; /* Each row is 1rem */
+    align-items: center;
+    max-height: 2.5rem; /* Maximum height of 2.5rem */
+}
+
+#imgProfile[b-4na5zezg94]{
+    grid-row: span 2; /* Span two rows */
+    grid-column: 1; /* In the first column */
+    width: 2.5rem;
+    height: auto;
+}
+
+#lblProfileName[b-4na5zezg94] {
+    grid-column: 2; /* In the second column */
+    grid-row: 1; /* In the first row */
+    font-size: 1rem; /*To ensure the height is 2rem */
+    font-weight: bold; /* Added bold styling */
+}
+
+#lblProfileRole[b-4na5zezg94] {
+    grid-column: 2; /* In the second column */
+    grid-row: 2; /* In the second row */
+    font-size: 1rem; /*To ensure the height is 2rem */
+}
+
+.profileText[b-4na5zezg94]{
+
+}
+
+#blazor-error-ui[b-4na5zezg94] {
+    color-scheme: light only;
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-4na5zezg94] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }

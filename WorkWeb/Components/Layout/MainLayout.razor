@@ -1,0 +1,28 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+
+<div class="page">
+    <main>
+        <header class="header">
+            <img id="imgHamburgerMenu" src="lista.png" alt="Hamburger Menu Icon" />
+            <h1 id="AppName">Work Web SIY</h1>
+            <grid id="profileGrid">
+                <img id="imgProfile" src="profile.png" alt="Profile Icon" />
+                <p id="lblProfileName" class="profileText">User Name</p>
+                <p id="lblProfileRole" class="profileText">User Role</p>
+            </grid>
+        </header>
+        <div class="sidebar" id="sidebar">
+            <NavMenu />
+        </div>
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
