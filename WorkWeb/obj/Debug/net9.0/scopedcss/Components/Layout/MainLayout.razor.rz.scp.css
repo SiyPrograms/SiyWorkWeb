@@ -1,16 +1,33 @@
 .page[b-4na5zezg94] {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Change to column to stack header and main */
+    height: 100vh; /* Full screen height */
 }
 
 main[b-4na5zezg94] {
     flex: 1;
+    display: flex;
+    flex-direction: row; /* Row direction for main content and sidebar */
+    overflow: auto; /* Ensure content is scrollable */
+    margin-top: 4rem; /* Adjust content below the header */
 }
 
 .sidebar[b-4na5zezg94] {
-    background-color: rgba(184, 134, 11, 0.5); /* darkgoldenrod with 50% transparency */
-    /* display: none; Make sidebar invisible by default */
+    background-color: rgba(184, 134, 11, 0.75); /* darkgoldenrod with 50% transparency */
+    display: none; /* Make sidebar invisible by default */
+    height: calc(100vh - 4rem); /* Full screen height minus header height */
+    width: 250px; /* Set a fixed width */
+    position: fixed; /* Fix the sidebar position */
+    top: 4rem; /* Position below the header */
+    left: 0;
+    z-index: 1; /* Ensure it is behind the header and body */
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth deployment */
+    transform: translateX(-100%); /* Initially hide the sidebar */
+}
+
+.sidebar.show[b-4na5zezg94] {
+    transform: translateX(0); /* Show the sidebar */
 }
 
 .header[b-4na5zezg94] {
@@ -20,7 +37,11 @@ main[b-4na5zezg94] {
     display: flex;
     align-items: center;
     padding: 0 1rem; /* Added padding for spacing */
-    position: relative; /* Added for centering */
+    position: fixed; /* Fix the header position */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; /* Ensure it is above the sidebar */
 }
 
 #imgHamburgerMenu[b-4na5zezg94] {
@@ -32,7 +53,7 @@ main[b-4na5zezg94] {
     margin-right: auto; /* Ensure it is to the left */
 }
 
-#AppName[b-4na5zezg94]{
+#AppName[b-4na5zezg94] {
     color: white;
     text-align: center;
     white-space: nowrap;
@@ -45,7 +66,7 @@ main[b-4na5zezg94] {
     transform: translateX(-50%);
 }
 
-#profileGrid[b-4na5zezg94]{
+#profileGrid[b-4na5zezg94] {
     margin-left: auto; /* Ensure it is to the right */
     margin-right: 2rem;
     display: grid;
@@ -55,7 +76,7 @@ main[b-4na5zezg94] {
     max-height: 2.5rem; /* Maximum height of 2.5rem */
 }
 
-#imgProfile[b-4na5zezg94]{
+#imgProfile[b-4na5zezg94] {
     grid-row: span 2; /* Span two rows */
     grid-column: 1; /* In the first column */
     width: 2.5rem;
@@ -75,8 +96,8 @@ main[b-4na5zezg94] {
     font-size: 1rem; /*To ensure the height is 2rem */
 }
 
-.profileText[b-4na5zezg94]{
-
+.profileText[b-4na5zezg94] {
+    /* ...existing code... */
 }
 
 #blazor-error-ui[b-4na5zezg94] {
@@ -93,9 +114,62 @@ main[b-4na5zezg94] {
     z-index: 1000;
 }
 
-    #blazor-error-ui .dismiss[b-4na5zezg94] {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
+#blazor-error-ui .dismiss[b-4na5zezg94] {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+@media (min-width: 769px) {
+    .sidebar[b-4na5zezg94] {
+        display: block !important; /* Show sidebar on larger screens */
+        transform: translateX(0); /* Ensure sidebar is visible */
     }
+
+    #imgHamburgerMenu[b-4na5zezg94] {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+
+    main[b-4na5zezg94] {
+        margin-left: 250px; /* Adjust content to the right of the sidebar */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar[b-4na5zezg94] {
+        display: block; /* Show sidebar on smaller screens */
+        position: fixed; /* Fix the sidebar position */
+        top: 4rem; /* Position below the header */
+        left: 0;
+        width: 100%; /* Full width */
+        height: calc(100vh - 4rem); /* Full height minus header height */
+        z-index: 3; /* Ensure it is above other content */
+    }
+
+    .header[b-4na5zezg94] {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 4rem; /* Ensure consistent header height */
+        padding: 1rem;
+    }
+
+    #AppName[b-4na5zezg94] {
+        position: absolute; /* Ensure it stays within the header */
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0;
+    }
+
+    #profileGrid[b-4na5zezg94] {
+        position: absolute; /* Ensure it stays within the header */
+        right: 1rem;
+        top: 1rem;
+        margin-top: 0;
+        grid-template-columns: auto; /* Hide the second column */
+    }
+
+    .profileText[b-4na5zezg94] {
+        display: none; /* Hide profile text */
+    }
+}

@@ -45,25 +45,25 @@
     padding-bottom: 0.5rem;
 }
 
-    .nav-item:first-of-type[b-knmmgef4d3] {
-        padding-top: 1rem;
-    }
+.nav-item:first-of-type[b-knmmgef4d3] {
+    padding-top: 1rem;
+}
 
-    .nav-item:last-of-type[b-knmmgef4d3] {
-        padding-bottom: 1rem;
-    }
+.nav-item:last-of-type[b-knmmgef4d3] {
+    padding-bottom: 1rem;
+}
 
-    .nav-item[b-knmmgef4d3]  .nav-link {
-        color: black;
-        background: none;
-        border: none;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-        width: 100%;
-    }
+.nav-item[b-knmmgef4d3]  .nav-link {
+    color: black;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    line-height: 3rem;
+    width: 100%;
+}
 
 .nav-item[b-knmmgef4d3]  a.active {
     background-color: darkgoldenrod;
@@ -78,5 +78,44 @@
 .navbar-toggler:checked ~ .nav-scrollable[b-knmmgef4d3] {
     display: block;
     overflow-y: auto; /* Make the navbar scrollable */
-    height: 100vh; /* Full height */
+    height: calc(100vh - 4rem); /* Full height minus header height */
+    top: 4rem; /* Position below the header */
+}
+
+@media (max-width: 768px) {
+    .nav-scrollable[b-knmmgef4d3] {
+        display: block; /* Ensure nav items are shown on smaller screens */
+    }
+
+    .navbar-toggler[b-knmmgef4d3] {
+        display: block;
+    }
+
+    .header[b-knmmgef4d3] {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 1rem;
+    }
+
+    #AppName[b-knmmgef4d3] {
+        position: static;
+        transform: none;
+        margin-top: 0.5rem;
+    }
+
+    #profileGrid[b-knmmgef4d3] {
+        margin-right: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-scrollable[b-knmmgef4d3] {
+        display: block !important;
+    }
+
+    .navbar-toggler[b-knmmgef4d3] {
+        display: none;
+    }
 }

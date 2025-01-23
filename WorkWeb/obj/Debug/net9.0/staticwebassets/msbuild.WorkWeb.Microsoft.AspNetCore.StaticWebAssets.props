@@ -882,23 +882,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfileLogo-nobg.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\WorkWeb.7x6o3a5net.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\WorkWeb.85hjykgdk0.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>WorkWeb</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/WorkWeb</BasePath>
-      <RelativePath>WorkWeb.7x6o3a5net.bundle.scp.css</RelativePath>
+      <RelativePath>WorkWeb.85hjykgdk0.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>7x6o3a5net</Fingerprint>
-      <Integrity>9WtyFucQfkyJ07ovqN9r+1IBtnpuQh/fueJYIqXsa7Q=</Integrity>
+      <Fingerprint>85hjykgdk0</Fingerprint>
+      <Integrity>jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\WorkWeb.7x6o3a5net.bundle.scp.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\WorkWeb.85hjykgdk0.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>
