@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7y6+LiUHUg0h4Xg1NWV5hpYCE8qupmkYt8ZixR4mjb0=",
+  "Hash": "VE/SGJWcXTcYO3wuvwwAuP+7Q8ubQrRC1ytTIxxIEpE=",
   "Source": "WorkWeb",
   "BasePath": "_content/WorkWeb",
   "Mode": "Default",
@@ -437,12 +437,12 @@
       "OriginalItemSpec": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-85hjykgdk0.gz",
+      "Identity": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-zwmxl6dq0i.gz",
       "SourceId": "WorkWeb",
       "SourceType": "Computed",
       "ContentRoot": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WorkWeb",
-      "RelativePath": "WorkWeb#[.{fingerprint=85hjykgdk0}]!.bundle.scp.css.gz",
+      "RelativePath": "WorkWeb#[.{fingerprint=zwmxl6dq0i}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -451,8 +451,8 @@
       "RelatedAsset": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkWeb.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "63jpi05zh7",
-      "Integrity": "HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=",
+      "Fingerprint": "bmb6hjdfcn",
+      "Integrity": "U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkWeb.bundle.scp.css"
@@ -710,12 +710,12 @@
       "OriginalItemSpec": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-85hjykgdk0.gz",
+      "Identity": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-zwmxl6dq0i.gz",
       "SourceId": "WorkWeb",
       "SourceType": "Computed",
       "ContentRoot": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WorkWeb",
-      "RelativePath": "WorkWeb#[.{fingerprint=85hjykgdk0}]?.styles.css.gz",
+      "RelativePath": "WorkWeb#[.{fingerprint=zwmxl6dq0i}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -724,8 +724,8 @@
       "RelatedAsset": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkWeb.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "63jpi05zh7",
-      "Integrity": "HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=",
+      "Fingerprint": "bmb6hjdfcn",
+      "Integrity": "U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkWeb.styles.css"
@@ -1018,8 +1018,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "85hjykgdk0",
-      "Integrity": "jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=",
+      "Fingerprint": "zwmxl6dq0i",
+      "Integrity": "Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkWeb.styles.css"
@@ -1039,8 +1039,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "85hjykgdk0",
-      "Integrity": "jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=",
+      "Fingerprint": "zwmxl6dq0i",
+      "Integrity": "Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkWeb.bundle.scp.css"
@@ -15815,13 +15815,13 @@
       ]
     },
     {
-      "Route": "WorkWeb.85hjykgdk0.bundle.scp.css",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-85hjykgdk0.gz",
+      "Route": "WorkWeb.bundle.scp.css",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-zwmxl6dq0i.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000426257460"
+          "Quality": "0.000419287212"
         }
       ],
       "ResponseHeaders": [
@@ -15831,19 +15831,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2345"
+          "Value": "2384"
         },
         {
           "Name": "ETag",
-          "Value": "\"HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=\""
+          "Value": "\"U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -15859,26 +15859,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=\""
+          "Value": "W/\"Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "85hjykgdk0"
-        },
-        {
-          "Name": "label",
-          "Value": "WorkWeb.bundle.scp.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY="
+          "Value": "sha256-Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU="
         }
       ]
     },
     {
-      "Route": "WorkWeb.85hjykgdk0.bundle.scp.css",
+      "Route": "WorkWeb.bundle.scp.css",
       "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkWeb.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -15888,7 +15880,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8924"
+          "Value": "9153"
         },
         {
           "Name": "Content-Type",
@@ -15896,11 +15888,293 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=\""
+          "Value": "\"Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU="
+        }
+      ]
+    },
+    {
+      "Route": "WorkWeb.bundle.scp.css.gz",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-zwmxl6dq0i.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk="
+        }
+      ]
+    },
+    {
+      "Route": "WorkWeb.styles.css",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-zwmxl6dq0i.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000419287212"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2384"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU="
+        }
+      ]
+    },
+    {
+      "Route": "WorkWeb.styles.css",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkWeb.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9153"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU="
+        }
+      ]
+    },
+    {
+      "Route": "WorkWeb.styles.css.gz",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-zwmxl6dq0i.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2384"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk="
+        }
+      ]
+    },
+    {
+      "Route": "WorkWeb.zwmxl6dq0i.bundle.scp.css",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-zwmxl6dq0i.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000419287212"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2384"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zwmxl6dq0i"
+        },
+        {
+          "Name": "label",
+          "Value": "WorkWeb.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU="
+        }
+      ]
+    },
+    {
+      "Route": "WorkWeb.zwmxl6dq0i.bundle.scp.css",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkWeb.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9153"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15910,7 +16184,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "85hjykgdk0"
+          "Value": "zwmxl6dq0i"
         },
         {
           "Name": "label",
@@ -15918,13 +16192,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY="
+          "Value": "sha256-Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU="
         }
       ]
     },
     {
-      "Route": "WorkWeb.85hjykgdk0.bundle.scp.css.gz",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-85hjykgdk0.gz",
+      "Route": "WorkWeb.zwmxl6dq0i.bundle.scp.css.gz",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-zwmxl6dq0i.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15933,7 +16207,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2345"
+          "Value": "2384"
         },
         {
           "Name": "Content-Type",
@@ -15941,11 +16215,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=\""
+          "Value": "\"U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15963,7 +16237,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "85hjykgdk0"
+          "Value": "zwmxl6dq0i"
         },
         {
           "Name": "label",
@@ -15971,18 +16245,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0="
+          "Value": "sha256-U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk="
         }
       ]
     },
     {
-      "Route": "WorkWeb.85hjykgdk0.styles.css",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-85hjykgdk0.gz",
+      "Route": "WorkWeb.zwmxl6dq0i.styles.css",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-zwmxl6dq0i.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000426257460"
+          "Quality": "0.000419287212"
         }
       ],
       "ResponseHeaders": [
@@ -15992,15 +16266,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2345"
+          "Value": "2384"
         },
         {
           "Name": "ETag",
-          "Value": "\"HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=\""
+          "Value": "\"U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16020,13 +16294,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=\""
+          "Value": "W/\"Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "85hjykgdk0"
+          "Value": "zwmxl6dq0i"
         },
         {
           "Name": "label",
@@ -16034,12 +16308,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY="
+          "Value": "sha256-Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU="
         }
       ]
     },
     {
-      "Route": "WorkWeb.85hjykgdk0.styles.css",
+      "Route": "WorkWeb.zwmxl6dq0i.styles.css",
       "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkWeb.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -16049,7 +16323,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8924"
+          "Value": "9153"
         },
         {
           "Name": "Content-Type",
@@ -16057,11 +16331,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=\""
+          "Value": "\"Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16071,7 +16345,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "85hjykgdk0"
+          "Value": "zwmxl6dq0i"
         },
         {
           "Name": "label",
@@ -16079,13 +16353,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY="
+          "Value": "sha256-Q08w0IWtsQNrY4T3FJFiQ+HGSYP/xo1nhim96bzAYLU="
         }
       ]
     },
     {
-      "Route": "WorkWeb.85hjykgdk0.styles.css.gz",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-85hjykgdk0.gz",
+      "Route": "WorkWeb.zwmxl6dq0i.styles.css.gz",
+      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-zwmxl6dq0i.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -16094,7 +16368,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2345"
+          "Value": "2384"
         },
         {
           "Name": "Content-Type",
@@ -16102,11 +16376,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=\""
+          "Value": "\"U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
+          "Value": "Thu, 23 Jan 2025 17:30:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16124,7 +16398,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "85hjykgdk0"
+          "Value": "zwmxl6dq0i"
         },
         {
           "Name": "label",
@@ -16132,281 +16406,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0="
-        }
-      ]
-    },
-    {
-      "Route": "WorkWeb.bundle.scp.css",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-85hjykgdk0.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000426257460"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2345"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY="
-        }
-      ]
-    },
-    {
-      "Route": "WorkWeb.bundle.scp.css",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkWeb.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8924"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY="
-        }
-      ]
-    },
-    {
-      "Route": "WorkWeb.bundle.scp.css.gz",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\if833ihuaj-85hjykgdk0.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2345"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0="
-        }
-      ]
-    },
-    {
-      "Route": "WorkWeb.styles.css",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-85hjykgdk0.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000426257460"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2345"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY="
-        }
-      ]
-    },
-    {
-      "Route": "WorkWeb.styles.css",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkWeb.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8924"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jE/4CavikCI91m6tgV8On9lFUzgBPVKR6H1g8ttf3WY="
-        }
-      ]
-    },
-    {
-      "Route": "WorkWeb.styles.css.gz",
-      "AssetFile": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\Debug\\net9.0\\compressed\\pl659qx4l9-85hjykgdk0.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2345"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 23 Jan 2025 04:36:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-HnFVUWtIEeCRtpauvp8pibKHKNbTcuMXYE+XR8n2tF0="
+          "Value": "sha256-U+3DyO6rVoRJ636l7v45BQY/e8oPK0ndtEwtmbal7wk="
         }
       ]
     }

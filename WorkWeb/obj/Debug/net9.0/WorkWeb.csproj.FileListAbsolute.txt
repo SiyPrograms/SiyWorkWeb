@@ -78,5 +78,5 @@ d:\Softwares\SiyWorkWeb\WorkWeb\obj\Debug\net9.0\WorkWeb.genruntimeconfig.cache
 d:\Softwares\SiyWorkWeb\WorkWeb\obj\Debug\net9.0\ref\WorkWeb.dll
 d:\Softwares\SiyWorkWeb\WorkWeb\obj\Debug\net9.0\WorkWeb.RazorAssemblyInfo.cache
 d:\Softwares\SiyWorkWeb\WorkWeb\obj\Debug\net9.0\WorkWeb.RazorAssemblyInfo.cs
-d:\Softwares\SiyWorkWeb\WorkWeb\obj\Debug\net9.0\compressed\pl659qx4l9-85hjykgdk0.gz
-d:\Softwares\SiyWorkWeb\WorkWeb\obj\Debug\net9.0\compressed\if833ihuaj-85hjykgdk0.gz
+d:\Softwares\SiyWorkWeb\WorkWeb\obj\Debug\net9.0\compressed\pl659qx4l9-zwmxl6dq0i.gz
+d:\Softwares\SiyWorkWeb\WorkWeb\obj\Debug\net9.0\compressed\if833ihuaj-zwmxl6dq0i.gz

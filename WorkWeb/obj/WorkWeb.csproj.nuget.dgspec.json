@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj": {}
+    "D:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj": {}
   },
   "projects": {
-    "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj": {
+    "D:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj",
+        "projectUniqueName": "D:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj",
         "projectName": "WorkWeb",
-        "projectPath": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj",
+        "projectPath": "D:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj",
         "packagesPath": "C:\\Users\\feli_\\.nuget\\packages\\",
-        "outputPath": "d:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\",
+        "outputPath": "D:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\feli_\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column; /* Change to column to stack header and main */
     height: 100vh; /* Full screen height */
+    background-color: black; /* Set background color to black */
+    color: darkgoldenrod; /* Set text color to darkgoldenrod */
 }
 
 main {
@@ -88,12 +90,14 @@ main {
     grid-row: 1; /* In the first row */
     font-size: 1rem; /*To ensure the height is 2rem */
     font-weight: bold; /* Added bold styling */
+    color: black; /* Set text color to black */
 }
 
 #lblProfileRole {
     grid-column: 2; /* In the second column */
     grid-row: 2; /* In the second row */
     font-size: 1rem; /*To ensure the height is 2rem */
+    color: black; /* Set text color to black */
 }
 
 .profileText {
