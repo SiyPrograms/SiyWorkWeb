@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj",
         "projectName": "WorkWeb",
         "projectPath": "D:\\Softwares\\SiyWorkWeb\\WorkWeb\\WorkWeb.csproj",
-        "packagesPath": "C:\\Users\\feli_\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\progr\\.nuget\\packages\\",
         "outputPath": "D:\\Softwares\\SiyWorkWeb\\WorkWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\feli_\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\progr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
