@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de Ruta Estratégica — De MVP a Producto</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2128;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #2ea84f;
+    --blue: #1f6feb;
+    --yellow: #d29922;
+    --purple: #a371f7;
+    --pink: #db61a2;
+    --orange: #e0622a;
+    --cyan: #39c5cf;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    padding: 28px 16px 56px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  header h1 {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  header p {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 4px;
+    font-family: var(--font-mono);
+  }
+
+  /* Strategy banner */
+  .strategy {
+    max-width: 820px;
+    margin: 0 auto 32px;
+    padding: 16px 18px;
+    background: linear-gradient(135deg, rgba(46,168,79,0.06), rgba(31,111,235,0.06));
+    border: 1px solid rgba(46,168,79,0.2);
+    border-radius: 8px;
+  }
+
+  .strategy-title {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  .strategy-text {
+    font-size: 0.78rem;
+    line-height: 1.65;
+    color: var(--text);
+  }
+
+  .strategy-text strong { color: var(--green); }
+
+  /* Track badges */
+  .tracks {
+    max-width: 820px;
+    margin: 0 auto 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .track {
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid;
+  }
+
+  .track.clickup {
+    background: rgba(224,98,42,0.05);
+    border-color: rgba(224,98,42,0.25);
+  }
+
+  .track.dev {
+    background: rgba(31,111,235,0.05);
+    border-color: rgba(31,111,235,0.25);
+  }
+
+  .track-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  .track.clickup .track-label { color: var(--orange); }
+  .track.dev .track-label { color: var(--blue); }
+
+  .track-desc {
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* Timeline */
+  .timeline {
+    max-width: 820px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--orange), var(--green), var(--blue), var(--purple), var(--pink), var(--yellow), var(--cyan));
+    opacity: 0.35;
+  }
+
+  .stage {
+    position: relative;
+    margin-bottom: 34px;
+  }
+
+  .stage-dot {
+    position: absolute;
+    left: -34px;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: var(--bg);
+    z-index: 1;
+  }
+
+  .stage-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }
+
+  .stage-num {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .stage-title {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .stage-when {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--muted);
+    margin-left: auto;
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+  }
+
+  .stage-goal {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 13px;
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+  }
+
+  .item-check {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .item-content { flex: 1; }
+
+  .item-title {
+    font-size: 0.76rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .item-desc {
+    font-size: 0.68rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .item-badge {
+    font-family: var(--font-mono);
+    font-size: 0.56rem;
+    padding: 2px 7px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    border: 1px solid;
+  }
+
+  .badge-clickup { color: var(--orange); border-color: rgba(224,98,42,0.3); background: rgba(224,98,42,0.06); }
+  .badge-dev { color: var(--blue); border-color: rgba(31,111,235,0.3); background: rgba(31,111,235,0.06); }
+  .badge-biz { color: var(--pink); border-color: rgba(219,97,162,0.3); background: rgba(219,97,162,0.06); }
+
+  .milestone {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    font-family: var(--font-mono);
+    background: rgba(46,168,79,0.06);
+    border: 1px solid rgba(46,168,79,0.25);
+    color: var(--green);
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Hoja de Ruta Estratégica</h1>
+  <p>De MVP interno → a Producto vendible · v1.0</p>
+</header>
+
+<!-- Strategy -->
+<div class="strategy">
+  <div class="strategy-title">◆ El Enfoque</div>
+  <div class="strategy-text">
+    No competimos contra ClickUp. Usamos <strong>ClickUp gratis para gestionar el día a día</strong> mientras construimos el MVP como <strong>base arquitectónica del software de facturación</strong> — el verdadero producto vendible. Cada línea de código del MVP (auth, API, entidades, Blazor) se reutiliza en el producto final para PyMEs.
+  </div>
+</div>
+
+<!-- Tracks -->
+<div class="tracks">
+  <div class="track clickup">
+    <div class="track-label">Track A — Gestión (ClickUp)</div>
+    <div class="track-desc">Herramienta de trabajo diaria. Tareas, horas, colaboración. Se configura una vez y se usa siempre.</div>
+  </div>
+  <div class="track dev">
+    <div class="track-label">Track B — Desarrollo (Código)</div>
+    <div class="track-desc">Construcción del MVP como fundación técnica del producto de facturación futuro.</div>
+  </div>
+</div>
+
+<div class="timeline">
+
+  <!-- ETAPA 0 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#e0622a">0</div>
+    <div class="stage-header">
+      <span class="stage-num">ETAPA 0</span>
+      <span class="stage-title" style="color:#e0622a">Setup de Gestión</span>
+      <span class="stage-when">Semana 1</span>
+    </div>
+    <div class="stage-goal">Meta: tener el entorno de trabajo colaborativo funcionando antes de escribir código.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Crear workspace en ClickUp</div>
+          <div class="item-desc">Cuenta gratuita, invitar al colaborador, crear el espacio "Desarrollo MVP" con las 6 fases del roadmap como listas.</div>
+        </div>
+        <span class="item-badge badge-clickup">ClickUp</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Cargar todas las tareas del roadmap</div>
+          <div class="item-desc">Pasar las 6 fases con sus subtareas a ClickUp. Asignar responsable a cada una (backend vs frontend).</div>
+        </div>
+        <span class="item-badge badge-clickup">ClickUp</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Activar time tracking</div>
+          <div class="item-desc">Configurar el tracking de horas nativo. Regla de equipo: toda sesión de trabajo se registra en su tarea correspondiente.</div>
+        </div>
+        <span class="item-badge badge-clickup">ClickUp</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Conectar ClickUp con GitHub</div>
+          <div class="item-desc">Integración nativa gratuita: los commits y PRs se vinculan automáticamente a las tareas.</div>
+        </div>
+        <span class="item-badge badge-clickup">ClickUp</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Hito: equipo trabajando ordenado con horas registradas desde el día 1</div>
+  </div>
+
+  <!-- ETAPA 1 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#2ea84f">1</div>
+    <div class="stage-header">
+      <span class="stage-num">ETAPA 1</span>
+      <span class="stage-title" style="color:#2ea84f">Fundación Técnica</span>
+      <span class="stage-when">Semanas 1-2</span>
+    </div>
+    <div class="stage-goal">Meta: repositorio, solución .NET y base de datos listos. Esta arquitectura es la del producto final.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Repo GitHub con estructura monorepo</div>
+          <div class="item-desc">/backend, /frontend, /shared, /database. Ramas main y develop. Pensado para crecer al producto de facturación.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Solución .NET con arquitectura por capas</div>
+          <div class="item-desc">API (ASP.NET Core) + Web (Blazor) + Shared (modelos) + Core (lógica de negocio). La capa Core es la que reutilizarán en el facturador.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">SQL Server local + scripts versionados</div>
+          <div class="item-desc">Las 5 tablas del ERD v2. Scripts en /database para recrear todo desde cero. Diseñar pensando que Cliente crecerá con campos fiscales completos.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Hito: `git clone` + script SQL = cualquier dev levanta el proyecto en 15 min</div>
+  </div>
+
+  <!-- ETAPA 2 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#1f6feb">2</div>
+    <div class="stage-header">
+      <span class="stage-num">ETAPA 2</span>
+      <span class="stage-title" style="color:#1f6feb">API Core Reutilizable</span>
+      <span class="stage-when">Semanas 3-5</span>
+    </div>
+    <div class="stage-goal">Meta: API REST con los cimientos que el software de facturación heredará tal cual.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Autenticación JWT + gestión de usuarios</div>
+          <div class="item-desc">Login, roles, tokens. Este módulo se reutiliza al 100% en el facturador. Hacerlo bien una vez.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">CRUD de Clientes con estructura fiscal CR</div>
+          <div class="item-desc">Cédula física/jurídica/DIMEX, validaciones. Este módulo ES el mismo del facturador — diseñarlo con Hacienda en mente desde ya.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">CRUD Proyecto → Fase → Subsección</div>
+          <div class="item-desc">Los endpoints de trackeo con la lógica de porcentaje en cascada como servicio independiente y testeable.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Registro de horas por subsección</div>
+          <div class="item-desc">Endpoints de bitácora. Comparar contra las horas de ClickUp al final para validar consistencia.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Hito: API completa documentada en Swagger, probada end-to-end</div>
+  </div>
+
+  <!-- ETAPA 3 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#a371f7">3</div>
+    <div class="stage-header">
+      <span class="stage-num">ETAPA 3</span>
+      <span class="stage-title" style="color:#a371f7">Frontend Blazor</span>
+      <span class="stage-when">Semanas 4-8</span>
+    </div>
+    <div class="stage-goal">Meta: UI funcional que valida la arquitectura Blazor → futuro Blazor Hybrid.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Sistema de componentes base</div>
+          <div class="item-desc">Layout, login, tablas, formularios, modales reutilizables. Esta librería de componentes se hereda al facturador.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Módulos: Clientes, Proyectos, Horas</div>
+          <div class="item-desc">Las pantallas del MVP conectadas al API. Vista de árbol Proyecto → Fase → Subsección con barras de progreso.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Dashboard con KPIs</div>
+          <div class="item-desc">Avance global, horas semanales, proyectos próximos a vencer. La experiencia visual que después venderán a PyMEs.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Hito: MVP usable de punta a punta en localhost</div>
+  </div>
+
+  <!-- ETAPA 4 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#db61a2">4</div>
+    <div class="stage-header">
+      <span class="stage-num">ETAPA 4</span>
+      <span class="stage-title" style="color:#db61a2">Producción + Validación</span>
+      <span class="stage-when">Semanas 8-10</span>
+    </div>
+    <div class="stage-goal">Meta: MVP desplegado y usándose en paralelo con ClickUp para validarlo con uso real.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Deploy en Azure (año gratuito)</div>
+          <div class="item-desc">API en App Service, Blazor en Static Web App, DB en Azure SQL Basic. Aprenden el pipeline de deploy que usarán con clientes.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Dogfooding: trackear un proyecto real</div>
+          <div class="item-desc">Registrar el siguiente desarrollo (el facturador) dentro del MVP. Detectar fricciones y mejorarlas.</div>
+        </div>
+        <span class="item-badge badge-biz">Negocio</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Retro: ¿qué le falta al MVP vs ClickUp?</div>
+          <div class="item-desc">Comparar la experiencia. Lo que ClickUp hace mejor = backlog de mejoras. Lo que el MVP hace y ClickUp no = diferenciadores del producto.</div>
+        </div>
+        <span class="item-badge badge-biz">Negocio</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Hito: v1.0.0 en producción + backlog de Fase 2 priorizado</div>
+  </div>
+
+  <!-- ETAPA 5 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#d29922">5</div>
+    <div class="stage-header">
+      <span class="stage-num">ETAPA 5</span>
+      <span class="stage-title" style="color:#d29922">Hacia el Producto Vendible</span>
+      <span class="stage-when">Mes 3+</span>
+    </div>
+    <div class="stage-goal">Meta: reutilizar la fundación del MVP para construir el software de facturación para PyMEs.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Módulo de facturación electrónica CR</div>
+          <div class="item-desc">Sobre la misma base: integración con Hacienda (TRIBU-CR), CAByS 4.4 con desglose por línea, comprobantes electrónicos.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Fase 2 del sistema interno</div>
+          <div class="item-desc">Tickets de clientes, licencias, equipos, software entregado — todo lo que dejamos fuera del MVP.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Blazor Hybrid (MAUI)</div>
+          <div class="item-desc">Migrar los componentes ya existentes a app móvil/escritorio cuando el producto lo justifique.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Primer cliente PyME</div>
+          <div class="item-desc">El sistema interno + el facturador se convierten en la demo viva para conseguir el primer cliente pagado.</div>
+        </div>
+        <span class="item-badge badge-biz">Negocio</span>
+      </div>
+    </div>
+    <div class="milestone">🚀 Hito final: producto vendible con base de código probada y reutilizada</div>
+  </div>
+
+</div><!-- end timeline -->
+
+<footer>Hoja de Ruta Estratégica v1.0 · ClickUp gestiona, el código construye el futuro</footer>
+
+</body>
+</html>
