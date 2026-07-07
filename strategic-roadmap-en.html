@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Roadmap — From MVP to Product</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2128;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #2ea84f;
+    --blue: #1f6feb;
+    --yellow: #d29922;
+    --purple: #a371f7;
+    --pink: #db61a2;
+    --orange: #e0622a;
+    --cyan: #39c5cf;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    padding: 28px 16px 56px;
+  }
+
+  header { text-align: center; margin-bottom: 16px; }
+
+  header h1 {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  header p {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 4px;
+    font-family: var(--font-mono);
+  }
+
+  .strategy {
+    max-width: 820px;
+    margin: 0 auto 32px;
+    padding: 16px 18px;
+    background: linear-gradient(135deg, rgba(46,168,79,0.06), rgba(31,111,235,0.06));
+    border: 1px solid rgba(46,168,79,0.2);
+    border-radius: 8px;
+  }
+
+  .strategy-title {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  .strategy-text {
+    font-size: 0.78rem;
+    line-height: 1.65;
+    color: var(--text);
+  }
+
+  .strategy-text strong { color: var(--green); }
+
+  .tracks {
+    max-width: 820px;
+    margin: 0 auto 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .track { padding: 14px 16px; border-radius: 8px; border: 1px solid; }
+
+  .track.clickup { background: rgba(224,98,42,0.05); border-color: rgba(224,98,42,0.25); }
+  .track.dev { background: rgba(31,111,235,0.05); border-color: rgba(31,111,235,0.25); }
+
+  .track-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  .track.clickup .track-label { color: var(--orange); }
+  .track.dev .track-label { color: var(--blue); }
+
+  .track-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
+
+  .timeline {
+    max-width: 820px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--orange), var(--green), var(--blue), var(--purple), var(--pink), var(--yellow), var(--cyan));
+    opacity: 0.35;
+  }
+
+  .stage { position: relative; margin-bottom: 34px; }
+
+  .stage-dot {
+    position: absolute;
+    left: -34px;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: var(--bg);
+    z-index: 1;
+  }
+
+  .stage-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }
+
+  .stage-num {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .stage-title {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .stage-when {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--muted);
+    margin-left: auto;
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+  }
+
+  .stage-goal {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  .items { display: flex; flex-direction: column; gap: 7px; }
+
+  .item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 13px;
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+  }
+
+  .item-check {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .item-content { flex: 1; }
+
+  .item-title { font-size: 0.76rem; font-weight: 600; margin-bottom: 2px; }
+
+  .item-desc { font-size: 0.68rem; color: var(--muted); line-height: 1.5; }
+
+  .item-badge {
+    font-family: var(--font-mono);
+    font-size: 0.56rem;
+    padding: 2px 7px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    border: 1px solid;
+  }
+
+  .badge-clickup { color: var(--orange); border-color: rgba(224,98,42,0.3); background: rgba(224,98,42,0.06); }
+  .badge-dev { color: var(--blue); border-color: rgba(31,111,235,0.3); background: rgba(31,111,235,0.06); }
+  .badge-biz { color: var(--pink); border-color: rgba(219,97,162,0.3); background: rgba(219,97,162,0.06); }
+
+  .milestone {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    font-family: var(--font-mono);
+    background: rgba(46,168,79,0.06);
+    border: 1px solid rgba(46,168,79,0.25);
+    color: var(--green);
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Strategic Roadmap</h1>
+  <p>From internal MVP → to sellable Product · v1.0</p>
+</header>
+
+<div class="strategy">
+  <div class="strategy-title">◆ The Approach</div>
+  <div class="strategy-text">
+    We don't compete against ClickUp. We use <strong>free ClickUp to manage day-to-day work</strong> while building the MVP as the <strong>architectural foundation of the invoicing software</strong> — the real sellable product. Every line of MVP code (auth, API, entities, Blazor) is reused in the final product for SMBs.
+  </div>
+</div>
+
+<div class="tracks">
+  <div class="track clickup">
+    <div class="track-label">Track A — Management (ClickUp)</div>
+    <div class="track-desc">Daily work tool. Tasks, hours, collaboration. Set up once, used always.</div>
+  </div>
+  <div class="track dev">
+    <div class="track-label">Track B — Development (Code)</div>
+    <div class="track-desc">Building the MVP as the technical foundation of the future invoicing product.</div>
+  </div>
+</div>
+
+<div class="timeline">
+
+  <!-- STAGE 0 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#e0622a">0</div>
+    <div class="stage-header">
+      <span class="stage-num">STAGE 0</span>
+      <span class="stage-title" style="color:#e0622a">Management Setup</span>
+      <span class="stage-when">Week 1</span>
+    </div>
+    <div class="stage-goal">Goal: have the collaborative work environment running before writing any code.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Create ClickUp workspace</div>
+          <div class="item-desc">Free account, invite your collaborator, create the "MVP Development" space with the 6 roadmap phases as lists.</div>
+        </div>
+        <span class="item-badge badge-clickup">ClickUp</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Load all roadmap tasks</div>
+          <div class="item-desc">Move the 6 phases with their subtasks into ClickUp. Assign an owner to each one (backend vs frontend).</div>
+        </div>
+        <span class="item-badge badge-clickup">ClickUp</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Enable time tracking</div>
+          <div class="item-desc">Set up native time tracking. Team rule: every work session is logged on its corresponding task.</div>
+        </div>
+        <span class="item-badge badge-clickup">ClickUp</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Connect ClickUp with GitHub</div>
+          <div class="item-desc">Free native integration: commits and PRs are automatically linked to tasks.</div>
+        </div>
+        <span class="item-badge badge-clickup">ClickUp</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Milestone: team working in an organized way with hours logged from day 1</div>
+  </div>
+
+  <!-- STAGE 1 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#2ea84f">1</div>
+    <div class="stage-header">
+      <span class="stage-num">STAGE 1</span>
+      <span class="stage-title" style="color:#2ea84f">Technical Foundation</span>
+      <span class="stage-when">Weeks 1-2</span>
+    </div>
+    <div class="stage-goal">Goal: repository, .NET solution and database ready. This architecture is the final product's architecture.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">GitHub repo with monorepo structure</div>
+          <div class="item-desc">/backend, /frontend, /shared, /database. main and develop branches. Designed to grow into the invoicing product.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">.NET solution with layered architecture</div>
+          <div class="item-desc">API (ASP.NET Core) + Web (Blazor) + Shared (models) + Core (business logic). The Core layer is the one you'll reuse in the invoicing product.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Local SQL Server + versioned scripts</div>
+          <div class="item-desc">The 5 tables from ERD v2. Scripts in /database to recreate everything from scratch. Design knowing Client will grow with full tax fields.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Milestone: `git clone` + SQL script = any dev spins up the project in 15 min</div>
+  </div>
+
+  <!-- STAGE 2 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#1f6feb">2</div>
+    <div class="stage-header">
+      <span class="stage-num">STAGE 2</span>
+      <span class="stage-title" style="color:#1f6feb">Reusable Core API</span>
+      <span class="stage-when">Weeks 3-5</span>
+    </div>
+    <div class="stage-goal">Goal: REST API with the foundations the invoicing software will inherit as-is.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">JWT authentication + user management</div>
+          <div class="item-desc">Login, roles, tokens. This module is 100% reused in the invoicing product. Do it right once.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Client CRUD with CR tax structure</div>
+          <div class="item-desc">Personal/corporate/DIMEX ID, validations. This module IS the same one in the invoicing product — design it with the Tax Authority (Hacienda) in mind from day one.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Project → Phase → Subsection CRUD</div>
+          <div class="item-desc">The tracking endpoints with the cascading percentage logic as an independent, testable service.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Hour logging per subsection</div>
+          <div class="item-desc">Logbook endpoints. Compare against ClickUp hours at the end to validate consistency.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Milestone: complete API documented in Swagger, tested end-to-end</div>
+  </div>
+
+  <!-- STAGE 3 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#a371f7">3</div>
+    <div class="stage-header">
+      <span class="stage-num">STAGE 3</span>
+      <span class="stage-title" style="color:#a371f7">Blazor Frontend</span>
+      <span class="stage-when">Weeks 4-8</span>
+    </div>
+    <div class="stage-goal">Goal: functional UI that validates the Blazor architecture → future Blazor Hybrid.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Base component system</div>
+          <div class="item-desc">Layout, login, tables, forms, reusable modals. This component library is inherited by the invoicing product.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Modules: Clients, Projects, Hours</div>
+          <div class="item-desc">The MVP screens connected to the API. Tree view Project → Phase → Subsection with progress bars.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Dashboard with KPIs</div>
+          <div class="item-desc">Overall progress, weekly hours, projects close to their deadline. The visual experience you'll later sell to SMBs.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Milestone: MVP usable end-to-end on localhost</div>
+  </div>
+
+  <!-- STAGE 4 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#db61a2">4</div>
+    <div class="stage-header">
+      <span class="stage-num">STAGE 4</span>
+      <span class="stage-title" style="color:#db61a2">Production + Validation</span>
+      <span class="stage-when">Weeks 8-10</span>
+    </div>
+    <div class="stage-goal">Goal: MVP deployed and used in parallel with ClickUp to validate it with real usage.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Deploy on Azure (free year)</div>
+          <div class="item-desc">API on App Service, Blazor on Static Web App, DB on Azure SQL Basic. You learn the deploy pipeline you'll use with clients.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Dogfooding: track a real project</div>
+          <div class="item-desc">Log the next development (the invoicing product) inside the MVP. Detect friction points and improve them.</div>
+        </div>
+        <span class="item-badge badge-biz">Business</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Retro: what's the MVP missing vs ClickUp?</div>
+          <div class="item-desc">Compare the experience. What ClickUp does better = improvement backlog. What the MVP does that ClickUp doesn't = product differentiators.</div>
+        </div>
+        <span class="item-badge badge-biz">Business</span>
+      </div>
+    </div>
+    <div class="milestone">✓ Milestone: v1.0.0 in production + prioritized Phase 2 backlog</div>
+  </div>
+
+  <!-- STAGE 5 -->
+  <div class="stage">
+    <div class="stage-dot" style="background:#d29922">5</div>
+    <div class="stage-header">
+      <span class="stage-num">STAGE 5</span>
+      <span class="stage-title" style="color:#d29922">Toward the Sellable Product</span>
+      <span class="stage-when">Month 3+</span>
+    </div>
+    <div class="stage-goal">Goal: reuse the MVP foundation to build the invoicing software for SMBs.</div>
+    <div class="items">
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">CR e-invoicing module</div>
+          <div class="item-desc">On the same foundation: integration with the Tax Authority (TRIBU-CR), CAByS 4.4 with per-line breakdown, electronic receipts.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Phase 2 of the internal system</div>
+          <div class="item-desc">Client tickets, licenses, hardware, delivered software — everything we left out of the MVP.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">Blazor Hybrid (MAUI)</div>
+          <div class="item-desc">Migrate the existing components to a mobile/desktop app when the product justifies it.</div>
+        </div>
+        <span class="item-badge badge-dev">Dev</span>
+      </div>
+      <div class="item">
+        <span class="item-check">☐</span>
+        <div class="item-content">
+          <div class="item-title">First SMB client</div>
+          <div class="item-desc">The internal system + the invoicing product become the living demo to land the first paying client.</div>
+        </div>
+        <span class="item-badge badge-biz">Business</span>
+      </div>
+    </div>
+    <div class="milestone">🚀 Final milestone: sellable product with a proven, reused codebase</div>
+  </div>
+
+</div>
+
+<footer>Strategic Roadmap v1.0 · ClickUp manages, code builds the future</footer>
+
+</body>
+</html>
